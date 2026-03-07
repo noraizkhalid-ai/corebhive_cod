@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Core Bhive</title>
+<meta name="description" content="Learn about Core Bhive — a Lahore-based business services firm delivering HR, Financial, and IT solutions to Pakistan's SMEs.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .mission-block {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 4px;
+    padding: 56px 48px;
+    position: relative; overflow: hidden;
+    margin-top: 56px;
+  }
+  .mission-block::before {
+    content: '"';
+    position: absolute; top: -20px; left: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 8rem; color: rgba(201,168,76,0.06);
+    line-height: 1;
+  }
+  .mission-block p {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+    line-height: 1.6; color: rgba(240,237,230,0.85);
+    max-width: 720px; position: relative;
+  }
+  .mission-block p em { color: var(--gold); font-style: italic; }
+
+  .values-grid {
+    margin-top: 60px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .value-card {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 4px; padding: 32px;
+    transition: border-color 0.3s;
+  }
+  .value-card:hover { border-color: rgba(201,168,76,0.35); }
+  .value-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700;
+    color: rgba(201,168,76,0.25);
+    margin-bottom: 16px;
+  }
+  .value-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; margin-bottom: 10px;
+  }
+  .value-card p {
+    font-size: 0.86rem; line-height: 1.7;
+    color: rgba(240,237,230,0.5);
+  }
+
+  .team-grid {
+    margin-top: 60px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .team-card {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 4px; padding: 32px;
+    text-align: center;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .team-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-4px); }
+  .team-avatar {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(201,168,76,0.1);
+    border: 2px solid rgba(201,168,76,0.25);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.8rem; margin: 0 auto 20px;
+  }
+  .team-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; margin-bottom: 6px;
+  }
+  .team-role {
+    font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px;
+  }
+  .team-card p {
+    font-size: 0.84rem; line-height: 1.65;
+    color: rgba(240,237,230,0.5);
+  }
+
+  @media (max-width: 900px) {
+    .values-grid, .team-grid { grid-template-columns: 1fr; }
+    .mission-block { padding: 36px 28px; }
+  }
+</style>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <div class="container">
+    <div class="nav__inner">
+
+      <a class="nav__logo" href="index.html"><span>Core B'hive</span></a>
+
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="hr-services.html" class="nav__link">HR Services</a></li>
+        <li><a href="financial-services.html" class="nav__link">Financial Services</a></li>
+        <li><a href="it-services.html" class="nav__link">IT Services</a></li>
+        <li><a href="about.html" class="nav__link active">About</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+      </ul>
+
+      <div class="nav__ctas">
+        <a class="btn btn--sm btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a class="btn btn--sm btn--primary" href="contact.html">Book a Meeting</a>
+      </div>
+
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile nav drawer -->
+<div class="nav__mobile" id="nav-mobile">
+  <a href="index.html" class="nav__link">Home</a>
+  <a href="hr-services.html" class="nav__link">HR Services</a>
+  <a href="financial-services.html" class="nav__link">Financial Services</a>
+  <a href="it-services.html" class="nav__link">IT Services</a>
+  <a href="about.html" class="nav__link active">About</a>
+  <a href="blog.html" class="nav__link">Blog</a>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;">
+    <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener">WhatsApp Us</a>
+    <a class="btn btn--primary" href="contact.html">Book a Meeting</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="hero-line"></div>
+  <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</div>
+  <h1>Built for Pakistan's<em>Growing Businesses.</em></h1>
+  <p>We started Core Bhive with one belief: that every SME deserves access to the same quality of HR, financial, and IT support as large corporations — without the cost.</p>
+</div>
+
+<!-- MISSION -->
+<section>
+  <p class="section-label">Our Mission</p>
+  <h2 class="section-title">Why we <span>exist.</span></h2>
+  <div class="mission-block">
+    <p>
+      Pakistan's SMEs are the backbone of its economy — but most are forced to operate without the professional support they need to scale.
+      Core Bhive exists to <em>change that.</em> We deliver enterprise-grade HR, financial, and IT services at accessible price points,
+      so growing businesses can compete, operate efficiently, and build with confidence.
+    </p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section style="background: var(--dark2);">
+  <p class="section-label">Our Values</p>
+  <h2 class="section-title">What we stand <span>behind.</span></h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <div class="value-num">01</div>
+      <h4>Transparency</h4>
+      <p>No hidden fees. No vague deliverables. You always know exactly what we're doing, why, and what it costs.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">02</div>
+      <h4>Accountability</h4>
+      <p>We own our outputs. Monthly reports, measurable results, and a dedicated point of contact for every client.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">03</div>
+      <h4>Expertise</h4>
+      <p>Every service is delivered by a specialist — not a generalist juggling multiple roles. You get the real thing.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">04</div>
+      <h4>Partnership</h4>
+      <p>We think of ourselves as part of your team, not a vendor. Your success is the only metric we care about.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">05</div>
+      <h4>Accessibility</h4>
+      <p>World-class service shouldn't require a corporate budget. Our packages are built around SME realities.</p>
+    </div>
+    <div class="value-card">
+      <div class="value-num">06</div>
+      <h4>Integrity</h4>
+      <p>We handle sensitive business information with discretion and professionalism — always, without exception.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <p class="section-label">Our Team</p>
+  <h2 class="section-title">The people behind <span>your results.</span></h2>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">👤</div>
+      <h4>Team Lead — HR</h4>
+      <div class="team-role">Head of HR Services</div>
+      <p>8+ years in human resources, talent acquisition, and organisational development across SMEs and corporates.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👤</div>
+      <h4>Team Lead — Finance</h4>
+      <div class="team-role">Head of Financial Services</div>
+      <p>A qualified accountant with deep expertise in SME bookkeeping, FBR compliance, and financial strategy.</p>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">👤</div>
+      <h4>Team Lead — IT</h4>
+      <div class="team-role">Head of IT Services</div>
+      <p>Full-stack developer and IT architect with a decade of experience building digital products for growing businesses.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">🏢</span> DHA Phase 6, Lahore</div>
+  <div class="trust-item"><span class="trust-icon">🇵🇰</span> Pakistan-Registered Company</div>
+  <div class="trust-item"><span class="trust-icon">📆</span> Month-to-Month Engagements</div>
+  <div class="trust-item"><span class="trust-icon">⚡</span> 3 Expert Divisions</div>
+  <div class="trust-item"><span class="trust-icon">🤝</span> 50+ Businesses Served</div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <p class="section-label">Work With Us</p>
+  <h2>Let's build something <em>great together.</em></h2>
+  <p>Whether you need one service or all three — we're ready to be the expert team behind your business.</p>
+  <div class="cta-buttons">
+    <a href="contact.html" class="btn-primary">💬 Get in Touch</a>
+    <a href="index.html" class="btn-secondary">View Our Services</a>
+  </div>
+  <p class="cta-note">Response within 2 hours · corebhive.com</p>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Col 1: Brand -->
+      <div class="footer-col footer-brand">
+        <a class="footer-logo" href="index.html">Core B'hive</a>
+        <p class="footer-tagline">Affordable. Reliable. Professional.</p>
+        <div class="footer-contact">
+          <a class="footer-contact-link" href="https://wa.me/923219456792" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            0321-9456792
+          </a>
+          <a class="footer-contact-link" href="mailto:info@corebhive.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            info@corebhive.com
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hr-services.html">HR Services</a></li>
+          <li><a href="financial-services.html">Financial Services</a></li>
+          <li><a href="it-services.html">IT Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Location & Social -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Find Us</h4>
+        <p class="footer-address">DHA Phase 6<br>Lahore, Pakistan</p>
+        <a class="footer-linkedin" href="https://www.linkedin.com/company/coreb-hive-consultant-pvt-ltd" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          Follow on LinkedIn
+        </a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Core Bhive Service Pvt Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

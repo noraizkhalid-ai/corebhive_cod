@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Hexagon / hive mark -->
+  <path d="M18 8 L30 4 L42 8 L42 24 L30 28 L18 24 Z" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+  <path d="M22 14 L30 10 L38 14 L38 22 L30 26 L22 22 Z" fill="#C9A84C" fill-opacity="0.15" stroke="#C9A84C" stroke-width="1"/>
+  <!-- Inner hex dot -->
+  <circle cx="30" cy="18" r="2.5" fill="#C9A84C"/>
+
+  <!-- Wordmark -->
+  <text x="54" y="22" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C9A84C" letter-spacing="0.5">Core</text>
+  <text x="54" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#F0EDE6" letter-spacing="0.5">B'hive</text>
+</svg>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO: Replace with post-specific title and description -->
+<title>Article Title — Core Bhive Blog</title>
+<meta name="description" content="Article meta description goes here. Should be 150–160 characters for best SEO results.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<style>
+  /* ── POST LAYOUT ── */
+  .post-layout {
+    display: grid; grid-template-columns: 1fr 320px; gap: 64px;
+    padding: 80px 60px; max-width: 1200px; margin: 0 auto;
+    align-items: start;
+  }
+
+  /* ── ARTICLE ── */
+  article .post-category {
+    font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px; display: block;
+  }
+  article h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem); font-weight: 900;
+    line-height: 1.15; margin-bottom: 20px;
+  }
+  article h1 em { color: var(--gold); font-style: italic; }
+  .post-meta {
+    display: flex; gap: 24px; align-items: center; flex-wrap: wrap;
+    font-size: 0.8rem; color: var(--muted);
+    padding-bottom: 32px; margin-bottom: 40px;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+  .post-meta .author { display: flex; align-items: center; gap: 10px; }
+  .author-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(201,168,76,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+  }
+  .post-meta .dot-sep { color: rgba(201,168,76,0.3); }
+
+  /* ── ARTICLE BODY TYPOGRAPHY ── */
+  .post-body { line-height: 1.85; }
+  .post-body p {
+    font-size: 1rem; color: rgba(240,237,230,0.75);
+    margin-bottom: 24px;
+  }
+  .post-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700;
+    margin-top: 48px; margin-bottom: 16px;
+    color: var(--text);
+  }
+  .post-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 700;
+    margin-top: 36px; margin-bottom: 12px;
+    color: var(--text);
+  }
+  .post-body ul, .post-body ol {
+    margin: 0 0 24px 0; padding-left: 0; list-style: none;
+  }
+  .post-body ul li, .post-body ol li {
+    padding: 6px 0 6px 24px; position: relative;
+    font-size: 0.95rem; color: rgba(240,237,230,0.7);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .post-body ul li::before {
+    content: '—'; color: var(--gold);
+    position: absolute; left: 0;
+  }
+  .post-body ol { counter-reset: list-counter; }
+  .post-body ol li::before {
+    content: counter(list-counter) '.'; counter-increment: list-counter;
+    color: var(--gold); position: absolute; left: 0; font-weight: 600;
+  }
+  .post-body blockquote {
+    border-left: 3px solid var(--gold);
+    background: rgba(201,168,76,0.04);
+    padding: 20px 28px; margin: 36px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .post-body blockquote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-style: italic;
+    color: rgba(240,237,230,0.85); margin: 0;
+  }
+  .post-body strong { color: var(--text); font-weight: 600; }
+  .post-body a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+  .post-body a:hover { color: var(--gold-light); }
+
+  /* Callout box */
+  .callout {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 4px; padding: 24px 28px;
+    margin: 32px 0;
+  }
+  .callout-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 8px;
+  }
+  .callout p { margin: 0; font-size: 0.9rem; }
+
+  /* Post footer */
+  .post-footer {
+    margin-top: 56px; padding-top: 40px;
+    border-top: 1px solid rgba(201,168,76,0.12);
+  }
+  .post-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px; }
+  .post-tag {
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+    border: 1px solid rgba(201,168,76,0.2); color: var(--muted);
+    padding: 5px 12px; border-radius: 2px;
+  }
+  .post-cta {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 4px; padding: 32px;
+    text-align: center;
+  }
+  .post-cta p {
+    font-size: 0.9rem; color: rgba(240,237,230,0.6); margin-bottom: 20px;
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar { position: sticky; top: 100px; }
+  .sidebar-section {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.1);
+    border-radius: 4px; padding: 28px;
+    margin-bottom: 24px;
+  }
+  .sidebar-label {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 20px;
+  }
+  .related-post {
+    display: block; text-decoration: none; color: inherit;
+    padding: 12px 0; border-bottom: 1px solid rgba(201,168,76,0.06);
+    transition: color 0.2s;
+  }
+  .related-post:last-child { border-bottom: none; padding-bottom: 0; }
+  .related-post:hover h4 { color: var(--gold); }
+  .related-post span {
+    font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 4px;
+  }
+  .related-post h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem; line-height: 1.4;
+    transition: color 0.2s;
+  }
+  .toc-list { list-style: none; }
+  .toc-list li {
+    padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .toc-list a {
+    font-size: 0.84rem; color: rgba(240,237,230,0.6);
+    text-decoration: none; transition: color 0.2s;
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .toc-list a::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+  .toc-list a:hover { color: var(--gold); }
+
+  @media (max-width: 900px) {
+    .post-layout { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+    .sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="../index.html">Core B'hive</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../hr-services.html">HR Services</a></li>
+    <li><a href="../financial-services.html">Financial</a></li>
+    <li><a href="../it-services.html">IT Services</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+  </ul>
+  <a class="nav-cta" href="../contact.html">Book a Free Meeting</a>
+  <div class="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- POST LAYOUT -->
+<div class="post-layout">
+
+  <!-- ── MAIN ARTICLE ── -->
+  <main>
+    <article>
+      <!-- Category + breadcrumb -->
+      <span class="post-category">
+        <a href="../blog.html" style="color: var(--muted); text-decoration: none;">Blog</a>
+        &nbsp;/&nbsp; Finance <!-- Replace with actual category -->
+      </span>
+
+      <!-- Title -->
+      <h1>Why Every Pakistani SME Needs<em>a Monthly P&L Statement</em></h1>
+
+      <!-- Meta -->
+      <div class="post-meta">
+        <div class="author">
+          <div class="author-avatar">✍️</div>
+          <span>Core Bhive Finance Team</span> <!-- Replace with author name -->
+        </div>
+        <span class="dot-sep">·</span>
+        <span>March 15, 2025</span> <!-- Replace with publish date -->
+        <span class="dot-sep">·</span>
+        <span>6 min read</span>
+      </div>
+
+      <!-- ── ARTICLE BODY ── -->
+      <!-- Replace the content below with the actual article content -->
+      <div class="post-body">
+
+        <p>
+          Most small business owners in Pakistan operate on gut feel. They know roughly what came in, vaguely what went out,
+          and trust that if their bank account isn't empty, things must be going okay. <strong>This approach works — until it doesn't.</strong>
+        </p>
+
+        <p>
+          A monthly Profit & Loss (P&L) statement changes all of that. It gives you a clear, factual picture of your business's
+          financial performance every month — not at year-end when it's too late to act.
+        </p>
+
+        <div class="callout">
+          <div class="callout-label">Key Insight</div>
+          <p>Businesses that review monthly financial statements are significantly more likely to identify cash flow problems
+          before they become crises. The P&L is your early warning system.</p>
+        </div>
+
+        <h2 id="what-is-pl">What Exactly Is a P&L Statement?</h2>
+
+        <p>
+          A Profit & Loss statement (also called an income statement) is a financial document that summarises your revenues,
+          costs, and expenses over a specific period — in this case, a single month. It answers one fundamental question:
+          <strong>did your business make or lose money this month?</strong>
+        </p>
+
+        <p>It typically contains three sections:</p>
+
+        <ul>
+          <li><strong>Revenue</strong> — all money earned from sales and services</li>
+          <li><strong>Cost of Goods Sold (COGS)</strong> — direct costs of delivering your product or service</li>
+          <li><strong>Operating Expenses</strong> — salaries, rent, utilities, marketing, and other overhead</li>
+        </ul>
+
+        <p>
+          The difference between revenue and all these costs is your <strong>net profit or loss</strong>.
+        </p>
+
+        <h2 id="why-monthly">Why Monthly — Not Quarterly or Annually?</h2>
+
+        <p>
+          Annual accounts tell you what happened. Monthly P&Ls tell you what's <em>happening</em> — and give you enough
+          time to do something about it.
+        </p>
+
+        <blockquote>
+          <p>"A business that only reviews finances annually is like a pilot who only checks their instruments
+          once — at landing."</p>
+        </blockquote>
+
+        <h2 id="getting-started">How to Get Started</h2>
+
+        <p>
+          You don't need expensive software or a full accounting team to produce a monthly P&L.
+          What you need is consistent bookkeeping — and a partner who knows how to structure it properly.
+        </p>
+
+        <ol>
+          <li>Track all income and expenses as they occur — not in a batch at month-end</li>
+          <li>Categorise expenses correctly (COGS vs. operating expenses)</li>
+          <li>Reconcile your bank statements monthly</li>
+          <li>Review the P&L with your accountant or financial advisor within the first week of the new month</li>
+        </ol>
+
+        <p>
+          At Core Bhive, we produce clean, easy-to-read monthly financial statements for all our financial services clients —
+          delivered in the first week of every month, with a brief commentary explaining the key numbers.
+        </p>
+
+      </div>
+
+      <!-- Post Footer -->
+      <div class="post-footer">
+        <div class="post-tags">
+          <span class="post-tag">Finance</span>
+          <span class="post-tag">SME</span>
+          <span class="post-tag">Bookkeeping</span>
+          <span class="post-tag">Tax</span>
+          <span class="post-tag">Financial Reporting</span>
+        </div>
+
+        <div class="post-cta">
+          <p>Want clean monthly financial reports for your business — without the hassle?</p>
+          <a href="../contact.html" class="btn-primary" style="display: inline-flex;">
+            💬 Book a Free Financial Consultation
+          </a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+
+    <!-- Table of Contents -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">In This Article</div>
+      <ul class="toc-list">
+        <li><a href="#what-is-pl">What Is a P&L Statement?</a></li>
+        <li><a href="#why-monthly">Why Monthly Matters</a></li>
+        <li><a href="#getting-started">How to Get Started</a></li>
+      </ul>
+    </div>
+
+    <!-- Related Posts -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">Related Articles</div>
+      <a href="post-template.html" class="related-post">
+        <span>Finance</span>
+        <h4>FBR Compliance Checklist for SMEs in 2025</h4>
+      </a>
+      <a href="post-template.html" class="related-post">
+        <span>Finance</span>
+        <h4>Cash Flow vs. Profit: Why Your Business Can Be Both</h4>
+      </a>
+      <a href="post-template.html" class="related-post">
+        <span>HR</span>
+        <h4>5 Signs It's Time to Outsource Your HR Function</h4>
+      </a>
+    </div>
+
+    <!-- CTA Widget -->
+    <div class="sidebar-section" style="text-align: center; border-color: rgba(201,168,76,0.2);">
+      <div class="sidebar-label">Free Consultation</div>
+      <p style="font-size: 0.85rem; color: rgba(240,237,230,0.6); margin-bottom: 20px; line-height: 1.6;">
+        Let our team review your business finances — free, no obligation.
+      </p>
+      <a href="../contact.html" class="btn-primary" style="display: flex; justify-content: center; font-size: 0.78rem;">
+        Book a Free Call
+      </a>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2025 Core Bhive Service Pvt Ltd · Lahore, Pakistan</span>
+  <span>
+    <a href="tel:+923219456792">0321-9456792</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/company/coreb-hive-consultant-pvt-ltd" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://corebhive.com" target="_blank">corebhive.com</a>
+  </span>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
