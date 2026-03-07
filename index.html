@@ -212,21 +212,64 @@
       background: #0a0a0a;
       border-top: 1px solid rgba(255, 180, 0, 0.08);
       border-bottom: 1px solid rgba(255, 180, 0, 0.08);
-      padding: 18px var(--container-padding);
-      text-align: center;
+      padding: 18px 0;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+    }
+
+    .cred-strip::before,
+    .cred-strip::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      z-index: 2;
+    }
+
+    .cred-strip::before {
+      left: 0;
+      background: linear-gradient(to right, #0a0a0a, transparent);
+    }
+
+    .cred-strip::after {
+      right: 0;
+      background: linear-gradient(to left, #0a0a0a, transparent);
+    }
+
+    .cred-strip__track {
+      display: flex;
+      flex-shrink: 0;
+      animation: scroll-strip 25s linear infinite;
+    }
+
+    @keyframes scroll-strip {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     .cred-strip__text {
+      display: flex;
+      align-items: center;
       font-family: var(--font-body);
       font-size: 0.72rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: rgba(234, 234, 234, 0.55);
+      margin: 0;
+      padding-right: 20px;
+      white-space: nowrap;
     }
 
     .cred-strip__text .diamond {
       color: var(--color-gold);
-      margin: 0 10px;
+      margin: 0 20px;
       font-size: 0.6rem;
     }
 
@@ -705,9 +748,20 @@
 
       .step-circle {
         margin: 0;
-        flex-shrink: 0;
+        flex: 0 0 calc(64px) !important;
+        width: 64px !important;
+        height: 64px !important;
+        min-width: 64px !important;
+        min-height: 64px !important;
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 50% !important;
         position: relative;
         z-index: 1;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        line-height: 1 !important;
       }
 
       .step-item>div {
@@ -717,6 +771,11 @@
     }
 
     @media (max-width: 640px) {
+      .home-hero__headline .word {
+        animation: heroFadeIn 0.8s ease forwards !important;
+        animation-delay: 0.15s !important;
+      }
+
       .why-cols {
         grid-template-columns: 1fr;
       }
@@ -760,18 +819,7 @@
 
         <ul class="nav__links">
           <li class="nav__item">
-            <a href="index.html" class="nav__link active">Home</a>
-          </li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link nav__link--parent">Our Services</a>
-            <ul class="nav__dropdown">
-              <li><a href="hr-services.html">HR Services</a></li>
-              <li><a href="financial-services.html">Financial Services</a></li>
-              <li><a href="it-services.html">IT Services</a></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a href="blog.html" class="nav__link">Our Insights</a>
+            <a href="index.html" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
             <a href="about.html" class="nav__link nav__link--parent">Our Company</a>
@@ -780,6 +828,17 @@
               <li><a href="about.html#clients">Clients</a></li>
               <li><a href="about.html#people">People</a></li>
             </ul>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link nav__link--parent">Our Services</a>
+            <ul class="nav__dropdown">
+              <li><a href="hr-services.html">HR Services</a></li>
+              <li><a href="financial-services.html">Financial Services</a></li>
+              <li><a href="it-services.html">IT Services</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a href="blog.html" class="nav__link">Our Insights</a>
           </li>
         </ul>
 
@@ -806,7 +865,15 @@
 
   <!-- Mobile nav drawer -->
   <div class="nav__mobile" id="nav-mobile">
-    <a href="index.html" class="nav__link active">Home</a>
+    <a href="index.html" class="nav__link">Home</a>
+    <div class="nav__mobile-group">
+      <span class="nav__mobile-label">Our Company</span>
+      <div class="nav__mobile-sub">
+        <a href="about.html">About Us</a>
+        <a href="about.html#clients">Clients</a>
+        <a href="about.html#people">People</a>
+      </div>
+    </div>
     <div class="nav__mobile-group">
       <span class="nav__mobile-label">Our Services</span>
       <div class="nav__mobile-sub">
@@ -816,14 +883,6 @@
       </div>
     </div>
     <a href="blog.html" class="nav__link">Our Insights</a>
-    <div class="nav__mobile-group">
-      <span class="nav__mobile-label">Our Company</span>
-      <div class="nav__mobile-sub">
-        <a href="about.html">About Us</a>
-        <a href="about.html#clients">Clients</a>
-        <a href="about.html#people">People</a>
-      </div>
-    </div>
     <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;">
       <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener">WhatsApp Us</a>
       <a class="btn btn--primary" href="contact.html">Book a Meeting</a>
@@ -866,17 +925,22 @@
      SECTION 2 — CREDIBILITY STRIP
 ════════════════════════════════════════════ -->
   <div class="cred-strip">
-    <p class="cred-strip__text">
-      HR Outsourcing
-      <span class="diamond">◆</span>
-      Payroll Management
-      <span class="diamond">◆</span>
-      Bookkeeping
-      <span class="diamond">◆</span>
-      IT Support
-      <span class="diamond">◆</span>
-      Compliance &amp; Reporting
-    </p>
+    <div class="cred-strip__track">
+      <p class="cred-strip__text">
+        <span>HR Outsourcing</span><span class="diamond">◆</span>
+        <span>Payroll Management</span><span class="diamond">◆</span>
+        <span>Bookkeeping</span><span class="diamond">◆</span>
+        <span>IT Support</span><span class="diamond">◆</span>
+        <span>Compliance &amp; Reporting</span><span class="diamond">◆</span>
+      </p>
+      <p class="cred-strip__text" aria-hidden="true">
+        <span>HR Outsourcing</span><span class="diamond">◆</span>
+        <span>Payroll Management</span><span class="diamond">◆</span>
+        <span>Bookkeeping</span><span class="diamond">◆</span>
+        <span>IT Support</span><span class="diamond">◆</span>
+        <span>Compliance &amp; Reporting</span><span class="diamond">◆</span>
+      </p>
+    </div>
   </div>
 
   <!-- ═══════════════════════════════════════════
@@ -1103,14 +1167,14 @@
               </svg>
               0321-9456792
             </a>
-            <a class="footer-contact-link" href="mailto:info@corebhive.com">
+            <a class="footer-contact-link" href="mailto:connect@corebhive.com">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 aria-hidden="true">
                 <rect width="20" height="16" x="2" y="4" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
-              info@corebhive.com
+              connect@corebhive.com
             </a>
           </div>
         </div>

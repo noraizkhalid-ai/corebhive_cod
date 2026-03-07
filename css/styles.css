@@ -924,6 +924,7 @@ h6,
 .nav__mobile .nav__link {
   font-size: var(--text-xl);
   font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
   color: var(--color-black);
 }
 
@@ -935,11 +936,12 @@ h6,
 }
 
 .nav__mobile-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
   font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  color: var(--color-gray-400);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--color-black);
   margin-top: 8px;
   padding-bottom: 6px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);

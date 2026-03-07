@@ -18,7 +18,7 @@
   }
 
   /* ── MOBILE HAMBURGER MENU ── */
-  const hamburger  = document.querySelector('.nav__hamburger');
+  const hamburger = document.querySelector('.nav__hamburger');
   const mobileDrawer = document.querySelector('.nav__mobile');
   if (hamburger && mobileDrawer) {
     hamburger.addEventListener('click', () => {
@@ -38,7 +38,7 @@
 
   /* ── ACTIVE NAV LINK ── */
   (function setActiveLink() {
-    const path  = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav__links .nav__link, .nav__mobile .nav__link');
     links.forEach(link => {
       link.classList.remove('active');
@@ -57,13 +57,13 @@
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
+        entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.service-cell, .package-card, .step, .blog-card, .team-card').forEach(el => {
+  document.querySelectorAll('.service-cell, .package-card, .step, .blog-card, .team-card, .svc-card, .pain-card, .why-col, .step-item').forEach(el => {
     el.classList.add('reveal');
     observer.observe(el);
   });
@@ -144,8 +144,8 @@
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const name    = this.querySelector('[name="name"]');
-      const email   = this.querySelector('[name="email"]');
+      const name = this.querySelector('[name="name"]');
+      const email = this.querySelector('[name="email"]');
       const message = this.querySelector('[name="message"]');
       let valid = true;
 
