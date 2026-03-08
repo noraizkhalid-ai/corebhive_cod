@@ -7,151 +7,17 @@
   <title>About Us — Core Bhive</title>
   <meta name="description"
     content="Learn about Core Bhive — a Lahore-based business services firm delivering HR, Financial, and IT solutions to Pakistan's SMEs.">
+  <link rel="canonical" href="https://noraizkhalid.github.io/corebhive/about.html">
+  <meta property="og:title" content="About Us — Core Bhive">
+  <meta property="og:description"
+    content="Learn about Core Bhive — a Lahore-based business services firm delivering HR, Financial, and IT solutions to Pakistan's SMEs.">
+  <meta property="og:image" content="https://noraizkhalid.github.io/corebhive/assets/images/Png%20Logo.png">
+  <meta property="og:url" content="https://noraizkhalid.github.io/corebhive/about.html">
+  <meta property="og:type" content="website">
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .mission-block {
-      background: var(--dark2);
-      border: 1px solid rgba(201, 168, 76, 0.12);
-      border-radius: 4px;
-      padding: 56px 48px;
-      position: relative;
-      overflow: hidden;
-      margin-top: 56px;
-    }
-
-    .mission-block::before {
-      content: '"';
-      position: absolute;
-      top: -20px;
-      left: 40px;
-      font-family: 'Playfair Display', serif;
-      font-size: 8rem;
-      color: rgba(201, 168, 76, 0.06);
-      line-height: 1;
-    }
-
-    .mission-block p {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
-      line-height: 1.6;
-      color: rgba(240, 237, 230, 0.85);
-      max-width: 720px;
-      position: relative;
-    }
-
-    .mission-block p em {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .values-grid {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .value-card {
-      background: var(--dark2);
-      border: 1px solid rgba(201, 168, 76, 0.1);
-      border-radius: 4px;
-      padding: 32px;
-      transition: border-color 0.3s;
-    }
-
-    .value-card:hover {
-      border-color: rgba(201, 168, 76, 0.35);
-    }
-
-    .value-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: rgba(201, 168, 76, 0.25);
-      margin-bottom: 16px;
-    }
-
-    .value-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-    }
-
-    .value-card p {
-      font-size: 0.86rem;
-      line-height: 1.7;
-      color: rgba(240, 237, 230, 0.5);
-    }
-
-    .team-grid {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .team-card {
-      background: var(--dark2);
-      border: 1px solid rgba(201, 168, 76, 0.1);
-      border-radius: 4px;
-      padding: 32px;
-      text-align: center;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-
-    .team-card:hover {
-      border-color: rgba(201, 168, 76, 0.35);
-      transform: translateY(-4px);
-    }
-
-    .team-avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: rgba(201, 168, 76, 0.1);
-      border: 2px solid rgba(201, 168, 76, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      margin: 0 auto 20px;
-    }
-
-    .team-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-
-    .team-role {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-
-    .team-card p {
-      font-size: 0.84rem;
-      line-height: 1.65;
-      color: rgba(240, 237, 230, 0.5);
-    }
-
-    @media (max-width: 900px) {
-
-      .values-grid,
-      .team-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .mission-block {
-        padding: 36px 28px;
-      }
-    }
-  </style>
   <script defer src="js/main.js"></script>
 </head>
 
@@ -171,29 +37,24 @@
             <a href="index.html" class="nav__link">Home</a>
           </li>
           <li class="nav__item">
-            <a href="about.html" class="nav__link nav__link--parent">Our Company</a>
+            <a href="about.html" class="nav__link">About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="index.html#services" class="nav__link nav__link--parent">Services</a>
             <ul class="nav__dropdown">
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="about.html#clients">Clients</a></li>
-              <li><a href="about.html#people">People</a></li>
+              <li><a href="hr-services.html">Human Resources (HR)</a></li>
+              <li><a href="financial-services.html">Finance</a></li>
+              <li><a href="it-services.html">Information Technology (IT)</a></li>
             </ul>
           </li>
           <li class="nav__item">
-            <a href="index.html#services" class="nav__link nav__link--parent">Our Services</a>
-            <ul class="nav__dropdown">
-              <li><a href="hr-services.html">HR Services</a></li>
-              <li><a href="financial-services.html">Financial Services</a></li>
-              <li><a href="it-services.html">IT Services</a></li>
-            </ul>
-          </li>
-          <li class="nav__item">
-            <a href="blog.html" class="nav__link">Our Insights</a>
+            <a href="blog.html" class="nav__link">Insights</a>
           </li>
         </ul>
 
         <div class="nav__ctas">
-          <a class="btn btn--sm btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener"
-            style="display:inline-flex;align-items:center;gap:6px;">
+          <a class="btn btn--sm btn--secondary" href="https://wa.me/923219456792" target="_blank"
+            rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
               aria-hidden="true">
               <path
@@ -214,141 +75,283 @@
 
   <div class="nav__mobile" id="nav-mobile">
     <a href="index.html" class="nav__link">Home</a>
+    <a href="about.html" class="nav__link">About Us</a>
     <div class="nav__mobile-group">
-      <span class="nav__mobile-label">Our Company</span>
+      <span class="nav__mobile-label">Services</span>
       <div class="nav__mobile-sub">
-        <a href="about.html">About Us</a>
-        <a href="about.html#clients">Clients</a>
-        <a href="about.html#people">People</a>
+        <a href="hr-services.html">Human Resources (HR)</a>
+        <a href="financial-services.html">Finance</a>
+        <a href="it-services.html">Information Technology (IT)</a>
       </div>
     </div>
-    <div class="nav__mobile-group">
-      <span class="nav__mobile-label">Our Services</span>
-      <div class="nav__mobile-sub">
-        <a href="hr-services.html">HR Services</a>
-        <a href="financial-services.html">Financial Services</a>
-        <a href="it-services.html">IT Services</a>
-      </div>
-    </div>
-    <a href="blog.html" class="nav__link">Our Insights</a>
+    <a href="blog.html" class="nav__link">Insights</a>
     <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;">
-      <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener noreferrer">WhatsApp
+        Us</a>
       <a class="btn btn--primary" href="contact.html">Book a Meeting</a>
     </div>
   </div>
 
-  <!-- PAGE HEADER -->
-  <div class="page-header">
-    <div class="hero-line"></div>
-    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</div>
-    <h1>Built for Pakistan's<em>Growing Businesses.</em></h1>
-    <p>We started Core Bhive with one belief: that every SME deserves access to the same quality of HR, financial, and
-      IT support as large corporations — without the cost.</p>
-  </div>
-
-  <!-- MISSION -->
-  <section>
-    <p class="section-label">Our Mission</p>
-    <h2 class="section-title">Why we <span>exist.</span></h2>
-    <div class="mission-block">
-      <p>
-        Pakistan's SMEs are the backbone of its economy — but most are forced to operate without the professional
-        support they need to scale.
-        Core Bhive exists to <em>change that.</em> We deliver enterprise-grade HR, financial, and IT services at
-        accessible price points,
-        so growing businesses can compete, operate efficiently, and build with confidence.
-      </p>
+  <!-- SECTION 1: HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero__content">
+        <p class="about-hero__label">About Core Bhive</p>
+        <h1 class="about-hero__headline">We Exist Because Pakistani Businesses Deserve Better.</h1>
+        <p class="about-hero__subline">Most small businesses in Pakistan can't afford a full-time HR manager,
+          accountant, or IT team. We built Core Bhive to change that — giving every SME access to professional
+          operational support at a price that actually makes sense.</p>
+        <div class="about-hero__buttons">
+          <a href="contact.html" class="btn btn--primary btn--lg">Book a Free Meeting</a>
+          <a href="https://wa.me/923219456792" class="btn btn--secondary btn--lg" target="_blank"
+            rel="noopener noreferrer">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="about-hero__texture"></div>
     </div>
   </section>
 
-  <!-- VALUES -->
-  <section style="background: var(--dark2);">
-    <p class="section-label">Our Values</p>
-    <h2 class="section-title">What we stand <span>behind.</span></h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <div class="value-num">01</div>
-        <h4>Transparency</h4>
-        <p>No hidden fees. No vague deliverables. You always know exactly what we're doing, why, and what it costs.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-num">02</div>
-        <h4>Accountability</h4>
-        <p>We own our outputs. Monthly reports, measurable results, and a dedicated point of contact for every client.
-        </p>
-      </div>
-      <div class="value-card">
-        <div class="value-num">03</div>
-        <h4>Expertise</h4>
-        <p>Every service is delivered by a specialist — not a generalist juggling multiple roles. You get the real
-          thing.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-num">04</div>
-        <h4>Partnership</h4>
-        <p>We think of ourselves as part of your team, not a vendor. Your success is the only metric we care about.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-num">05</div>
-        <h4>Accessibility</h4>
-        <p>World-class service shouldn't require a corporate budget. Our packages are built around SME realities.</p>
-      </div>
-      <div class="value-card">
-        <div class="value-num">06</div>
-        <h4>Integrity</h4>
-        <p>We handle sensitive business information with discretion and professionalism — always, without exception.</p>
+  <!-- SECTION 2: OUR STORY -->
+  <section class="about-story">
+    <div class="container">
+      <p class="section-label">Our Story</p>
+      <div class="about-story__grid">
+        <div class="about-story__quote">
+          <p>We saw small businesses struggling with problems that had simple solutions. So we built them.</p>
+        </div>
+        <div class="about-story__body">
+          <p>Core Bhive was founded in 2025 in Lahore with a straightforward mission — make professional HR, finance,
+            and IT support accessible to every small and medium business in Pakistan.</p>
+          <p>For too long, quality outsourcing has been reserved for large corporations with big budgets. Small business
+            owners were left juggling payroll, chasing invoices, fixing WiFi, and recruiting staff — all on top of
+            actually running their business.</p>
+          <p>We built Core Bhive as a subscription-based outsourcing partner that works exactly like an in-house team,
+            without the overhead. Our clients get dedicated professionals, monthly deliverables, and a single point of
+            contact — at a fraction of what it would cost to hire internally.</p>
+          <p>Based in DHA Phase 6 Lahore, we work with businesses across the city and understand the specific challenges
+            of operating in the Pakistani market.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TEAM -->
-  <section>
-    <p class="section-label">Our Team</p>
-    <h2 class="section-title">The people behind <span>your results.</span></h2>
-    <div class="team-grid">
-      <div class="team-card">
-        <div class="team-avatar">👤</div>
-        <h4>Team Lead — HR</h4>
-        <div class="team-role">Head of HR Services</div>
-        <p>8+ years in human resources, talent acquisition, and organisational development across SMEs and corporates.
-        </p>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">👤</div>
-        <h4>Team Lead — Finance</h4>
-        <div class="team-role">Head of Financial Services</div>
-        <p>A qualified accountant with deep expertise in SME bookkeeping, FBR compliance, and financial strategy.</p>
-      </div>
-      <div class="team-card">
-        <div class="team-avatar">👤</div>
-        <h4>Team Lead — IT</h4>
-        <div class="team-role">Head of IT Services</div>
-        <p>Full-stack developer and IT architect with a decade of experience building digital products for growing
-          businesses.</p>
+  <!-- SECTION 3: MISSION AND VISION -->
+  <section class="about-mission">
+    <div class="container">
+      <div class="about-mission__grid">
+        <div class="about-mission__card">
+          <div class="about-mission__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To deliver affordable, reliable, and professional HR, financial, and IT outsourcing solutions that help
+            small and medium businesses in Pakistan operate efficiently and grow sustainably.</p>
+        </div>
+        <div class="about-mission__card">
+          <div class="about-mission__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20" />
+              <path d="m15 5-3-3-3 3" />
+              <path d="M5 10h14" />
+              <path d="M5 14h14" />
+              <path d="M5 18h14" />
+            </svg>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To become Pakistan's leading business outsourcing brand — where companies confidently delegate their
+            operations knowing they have a trusted long-term partner behind them.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- TRUST STRIP -->
-  <div class="trust-strip">
-    <div class="trust-item"><span class="trust-icon">🏢</span> DHA Phase 6, Lahore</div>
-    <div class="trust-item"><span class="trust-icon">🇵🇰</span> Pakistan-Registered Company</div>
-    <div class="trust-item"><span class="trust-icon">📆</span> Month-to-Month Engagements</div>
-    <div class="trust-item"><span class="trust-icon">⚡</span> 3 Expert Divisions</div>
-    <div class="trust-item"><span class="trust-icon">🤝</span> 50+ Businesses Served</div>
-  </div>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="cta-glow"></div>
-    <p class="section-label">Work With Us</p>
-    <h2>Let's build something <em>great together.</em></h2>
-    <p>Whether you need one service or all three — we're ready to be the expert team behind your business.</p>
-    <div class="cta-buttons">
-      <a href="contact.html" class="btn-primary">💬 Get in Touch</a>
-      <a href="index.html" class="btn-secondary">View Our Services</a>
+  <!-- SECTION 4: WHAT MAKES US DIFFERENT -->
+  <section class="about-different">
+    <div class="container">
+      <p class="section-label">Why Businesses Choose Us</p>
+      <h2 class="section-title">Not an agency. <span class="italic-accent">A partner.</span></h2>
+      <div class="about-different__grid">
+        <div class="about-different__card">
+          <div class="about-different__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h4>Affordable by Design</h4>
+          <p>We built our pricing model around what Pakistani SMEs can actually afford — not what the market typically
+            charges.</p>
+        </div>
+        <div class="about-different__card">
+          <div class="about-different__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <h4>Local and On the Ground</h4>
+          <p>We are based in Lahore, we understand local business culture, local compliance, and the specific challenges
+            of operating here.</p>
+        </div>
+        <div class="about-different__card">
+          <div class="about-different__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="11" width="14" height="10" rx="2" ry="2" />
+              <path d="M12 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+              <path d="M8 11V7a4 4 0 0 1 8 0" />
+            </svg>
+          </div>
+          <h4>No Lock-in Ever</h4>
+          <p>Every engagement is month-to-month. We earn your business every single month — you are never trapped in a
+            long contract.</p>
+        </div>
+        <div class="about-different__card">
+          <div class="about-different__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <line x1="19" y1="8" x2="19" y2="14" />
+              <line x1="22" y1="11" x2="16" y2="11" />
+            </svg>
+          </div>
+          <h4>One Point of Contact</h4>
+          <p>No call centres, no ticketing systems. You have one dedicated person who knows your business inside out and
+            is always reachable.</p>
+        </div>
+      </div>
     </div>
-    <p class="cta-note">Response within 2 hours · corebhive.com</p>
+  </section>
+
+  <!-- SECTION 5: THE HIVE COMMUNITY -->
+  <section class="about-hive">
+    <div class="container">
+      <p class="section-label">The Hive</p>
+      <h2 class="about-hive__headline">When you work with us, you join the Hive.</h2>
+      <p class="about-hive__subline">A growing network of forward-thinking Pakistani businesses who have chosen to
+        delegate their operations and focus on what they do best. Our clients share one thing in common — they stopped
+        letting HR, finance, and IT problems slow them down.</p>
+      <div class="about-hive__divider"></div>
+      <div class="about-hive__stats">
+        <div class="about-hive__stat">
+          <div class="about-hive__stat-num" data-counter data-target="50" data-suffix="+">0+</div>
+          <div class="about-hive__stat-label">Businesses Supported across Lahore</div>
+        </div>
+        <div class="about-hive__stat">
+          <div class="about-hive__stat-num" data-counter data-target="200" data-suffix="+">0+</div>
+          <div class="about-hive__stat-label">Services Delivered every month</div>
+        </div>
+        <div class="about-hive__stat">
+          <div class="about-hive__stat-num" data-counter data-target="95" data-suffix="%">0%</div>
+          <div class="about-hive__stat-label">Client Retention because results speak</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: VALUES -->
+  <section class="about-values">
+    <div class="container">
+      <p class="section-label">What We Stand For</p>
+      <h2 class="section-title">Four principles. <span class="italic-accent">Non-negotiable.</span></h2>
+      <div class="about-values__grid">
+        <div class="about-values__card">
+          <div class="about-values__num">01</div>
+          <h4>Affordable</h4>
+          <p>Quality support should not be a privilege reserved for big companies.</p>
+        </div>
+        <div class="about-values__card">
+          <div class="about-values__num">02</div>
+          <h4>Reliable</h4>
+          <p>You should never have to chase us. Deliverables arrive on time, every time.</p>
+        </div>
+        <div class="about-values__card">
+          <div class="about-values__num">03</div>
+          <h4>Professional</h4>
+          <p>Every output we deliver reflects the same standard you would expect from an enterprise team.</p>
+        </div>
+        <div class="about-values__card">
+          <div class="about-values__num">04</div>
+          <h4>Transparent</h4>
+          <p>Clear pricing, clear scope, clear communication. No surprises, ever.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: TEAM -->
+  <section class="about-team">
+    <div class="container">
+      <p class="section-label">Our Team</p>
+      <h2 class="section-title">Meet the people <span class="italic-accent">behind Core Bhive.</span></h2>
+      <div class="about-team__divider"></div>
+      <div class="about-team__grid">
+        <div class="about-team__card">
+          <div class="about-team__badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+          </div>
+          <div class="about-team__content">
+            <h3>Ms. Humera Pervez</h3>
+            <p class="about-team__role">Co-Founder & Managing Director</p>
+          </div>
+        </div>
+        <div class="about-team__card">
+          <div class="about-team__badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l8 3.6v7.72c0 4.36-3.02 8.44-8 9.5-4.98-1.06-8-5.14-8-9.5V7.78l8-3.6z" />
+              <circle cx="12" cy="10" r="3" />
+              <path d="M12 14c-2.67 0-8 1.34-8 4v1h16v-1c0-2.66-5.33-4-8-4z" />
+            </svg>
+          </div>
+          <div class="about-team__content">
+            <h3>Mr. RazaeRabbi</h3>
+            <p class="about-team__role">IT Network Services Lead</p>
+          </div>
+        </div>
+        <div class="about-team__card">
+          <div class="about-team__badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+          </div>
+          <div class="about-team__content">
+            <h3>Ms. Numera Pervaiz</h3>
+            <p class="about-team__role">Head of Business Strategy & Marketing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: CTA -->
+  <section class="about-cta">
+    <div class="container">
+      <p class="section-label">Work With Us</p>
+      <h2 class="about-cta__headline">Ready to stop doing <span class="italic-accent">everything yourself?</span></h2>
+      <p class="about-cta__subline">Book a free consultation and find out exactly how Core Bhive can take your
+        operational load off your plate — this month.</p>
+      <div class="about-cta__buttons">
+        <a href="https://wa.me/923219456792" class="btn btn--primary btn--lg" target="_blank"
+          rel="noopener noreferrer">WhatsApp Us
+          Now</a>
+        <a href="contact.html" class="btn btn--secondary btn--lg">Book a Meeting</a>
+      </div>
+      <p class="about-cta__note">No commitment · Free consultation · DHA Phase 6, Lahore</p>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -361,7 +364,7 @@
           <a class="footer-logo" href="index.html">Core B'hive</a>
           <p class="footer-tagline">Affordable. Reliable. Professional.</p>
           <div class="footer-contact">
-            <a class="footer-contact-link" href="https://wa.me/923219456792" target="_blank" rel="noopener">
+            <a class="footer-contact-link" href="https://wa.me/923219456792" target="_blank" rel="noopener noreferrer">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
                 aria-hidden="true">
                 <path
@@ -386,11 +389,11 @@
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="hr-services.html">HR Services</a></li>
-            <li><a href="financial-services.html">Financial Services</a></li>
-            <li><a href="it-services.html">IT Services</a></li>
+            <li><a href="hr-services.html">Human Resources (HR)</a></li>
+            <li><a href="financial-services.html">Finance</a></li>
+            <li><a href="it-services.html">Information Technology (IT)</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html">Insights</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -400,7 +403,7 @@
           <h4 class="footer-heading">Find Us</h4>
           <p class="footer-address">DHA Phase 6<br>Lahore, Pakistan</p>
           <a class="footer-linkedin" href="https://www.linkedin.com/company/coreb-hive-consultant-pvt-ltd"
-            target="_blank" rel="noopener">
+            target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
               aria-hidden="true">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
