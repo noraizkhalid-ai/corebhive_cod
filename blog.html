@@ -1131,6 +1131,14 @@
             </svg>
             Follow on LinkedIn
           </a>
+          <a class="footer-linkedin" href="https://www.instagram.com/corebhive_service/"
+            target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+              aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.518.988 4.088 4.088 0 0 1 .988 1.518c.163.46.349 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.088 4.088 0 0 1-.988 1.518 4.088 4.088 0 0 1-1.518.988c-.46.163-1.26.349-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.088 4.088 0 0 1-1.518-.988 4.088 4.088 0 0 1-.988-1.518c-.163-.46-.349-1.26-.403-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.088 4.088 0 0 1 3.624 3.2a4.088 4.088 0 0 1 1.518-.988c.46-.163 1.26-.349 2.43-.403C8.838 1.75 9.218 1.738 12 1.738V2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.903.333 4.14.63a5.876 5.876 0 0 0-2.126 1.384A5.876 5.876 0 0 0 .63 4.14C.333 4.903.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.278.261 2.15.558 2.913a5.876 5.876 0 0 0 1.384 2.126A5.876 5.876 0 0 0 4.14 23.37c.763.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.15-.261 2.913-.558a5.876 5.876 0 0 0 2.126-1.384 5.876 5.876 0 0 0 1.384-2.126c.297-.763.499-1.635.558-2.913C23.986 15.667 24 15.259 24 12s-.014-3.667-.072-4.947c-.059-1.278-.261-2.15-.558-2.913a5.876 5.876 0 0 0-1.384-2.126A5.876 5.876 0 0 0 19.86.63C19.097.333 18.225.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+            Follow on Instagram
+          </a>
         </div>
 
       </div>
@@ -1140,45 +1148,200 @@
     </div>
   </footer>
   <script>
-    // Category filter functionality
     document.addEventListener('DOMContentLoaded', function() {
       const filterPills = document.querySelectorAll('.filter-pill');
-      const postItems = document.querySelectorAll('.post-item');
+      const allPosts = Array.from(document.querySelectorAll('.post-item'));
+      const searchInput = document.getElementById('blogSearch');
+      const searchClear = document.getElementById('searchClear');
+      const noResults = document.getElementById('noResults');
+      const paginationNav = document.getElementById('blogPagination');
+      const paginationInfo = document.getElementById('paginationInfo');
 
-      filterPills.forEach(pill => {
+      const POSTS_PER_PAGE = 6;
+      let currentPage = 1;
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      // Get filtered posts based on category + search
+      function getFilteredPosts() {
+        return allPosts.filter(function(post) {
+          const postCategory = post.getAttribute('data-category');
+          const title = (post.querySelector('.post-title') || {}).textContent || '';
+          const excerpt = (post.querySelector('.post-excerpt') || {}).textContent || '';
+          const searchable = (title + ' ' + excerpt).toLowerCase();
+
+          var categoryMatch = activeCategory === 'all' || postCategory === activeCategory;
+          var searchMatch = !searchQuery || searchable.indexOf(searchQuery) !== -1;
+
+          return categoryMatch && searchMatch;
+        });
+      }
+
+      // Render the current view
+      function render() {
+        var filtered = getFilteredPosts();
+        var totalPages = Math.max(1, Math.ceil(filtered.length / POSTS_PER_PAGE));
+
+        if (currentPage > totalPages) currentPage = totalPages;
+
+        var startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+        var endIndex = startIndex + POSTS_PER_PAGE;
+        var pageItems = filtered.slice(startIndex, endIndex);
+
+        // Hide all posts first
+        allPosts.forEach(function(post) {
+          post.classList.add('hidden');
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(10px)';
+        });
+
+        // Show current page posts with staggered animation
+        pageItems.forEach(function(post, i) {
+          post.classList.remove('hidden');
+          setTimeout(function() {
+            post.style.opacity = '1';
+            post.style.transform = 'translateY(0)';
+          }, 50 + i * 60);
+        });
+
+        // No results
+        if (filtered.length === 0) {
+          noResults.classList.add('visible');
+        } else {
+          noResults.classList.remove('visible');
+        }
+
+        // Pagination
+        renderPagination(filtered.length, totalPages);
+      }
+
+      // Build pagination controls
+      function renderPagination(totalItems, totalPages) {
+        paginationNav.innerHTML = '';
+        paginationInfo.textContent = '';
+
+        if (totalPages <= 1) {
+          paginationNav.classList.add('hidden');
+          return;
+        }
+
+        paginationNav.classList.remove('hidden');
+
+        // Previous button
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'pagination-btn pagination-btn--arrow';
+        prevBtn.innerHTML = '&larr; Prev';
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.addEventListener('click', function() {
+          if (currentPage > 1) { currentPage--; render(); scrollToGrid(); }
+        });
+        paginationNav.appendChild(prevBtn);
+
+        // Page numbers with ellipsis
+        var pages = getPaginationRange(currentPage, totalPages);
+        pages.forEach(function(page) {
+          if (page === '...') {
+            var dots = document.createElement('span');
+            dots.className = 'pagination-ellipsis';
+            dots.textContent = '...';
+            paginationNav.appendChild(dots);
+          } else {
+            var btn = document.createElement('button');
+            btn.className = 'pagination-btn' + (page === currentPage ? ' active' : '');
+            btn.textContent = page;
+            btn.addEventListener('click', function() {
+              currentPage = page;
+              render();
+              scrollToGrid();
+            });
+            paginationNav.appendChild(btn);
+          }
+        });
+
+        // Next button
+        var nextBtn = document.createElement('button');
+        nextBtn.className = 'pagination-btn pagination-btn--arrow';
+        nextBtn.innerHTML = 'Next &rarr;';
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.addEventListener('click', function() {
+          if (currentPage < totalPages) { currentPage++; render(); scrollToGrid(); }
+        });
+        paginationNav.appendChild(nextBtn);
+
+        // Info text
+        var start = (currentPage - 1) * POSTS_PER_PAGE + 1;
+        var end = Math.min(currentPage * POSTS_PER_PAGE, totalItems);
+        paginationInfo.textContent = 'Showing ' + start + '–' + end + ' of ' + totalItems + ' articles';
+      }
+
+      // Smart pagination range: 1 ... 4 5 6 ... 10
+      function getPaginationRange(current, total) {
+        if (total <= 7) {
+          var arr = [];
+          for (var i = 1; i <= total; i++) arr.push(i);
+          return arr;
+        }
+        var pages = [];
+        pages.push(1);
+        if (current > 3) pages.push('...');
+        var rangeStart = Math.max(2, current - 1);
+        var rangeEnd = Math.min(total - 1, current + 1);
+        for (var j = rangeStart; j <= rangeEnd; j++) pages.push(j);
+        if (current < total - 2) pages.push('...');
+        pages.push(total);
+        return pages;
+      }
+
+      function scrollToGrid() {
+        var section = document.querySelector('.blog-posts');
+        if (section) {
+          var top = section.getBoundingClientRect().top + window.pageYOffset - 140;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+
+      // Category filter
+      filterPills.forEach(function(pill) {
         pill.addEventListener('click', function() {
-          const category = this.getAttribute('data-category');
-
-          // Update active state
-          filterPills.forEach(p => p.classList.remove('active'));
+          filterPills.forEach(function(p) { p.classList.remove('active'); });
           this.classList.add('active');
-
-          // Filter posts with smooth transition
-          postItems.forEach(post => {
-            const postCategory = post.getAttribute('data-category');
-
-            if (category === 'all' || postCategory === category) {
-              // Fade in
-              post.style.opacity = '0';
-              post.style.transform = 'translateY(10px)';
-              post.classList.remove('hidden');
-
-              setTimeout(() => {
-                post.style.opacity = '1';
-                post.style.transform = 'translateY(0)';
-              }, 50);
-            } else {
-              // Fade out
-              post.style.opacity = '0';
-              post.style.transform = 'translateY(10px)';
-
-              setTimeout(() => {
-                post.classList.add('hidden');
-              }, 300);
-            }
-          });
+          activeCategory = this.getAttribute('data-category');
+          currentPage = 1;
+          render();
         });
       });
+
+      // Search input
+      var searchTimer;
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimer);
+        var val = this.value;
+        searchTimer = setTimeout(function() {
+          searchQuery = val.trim().toLowerCase();
+          currentPage = 1;
+
+          if (val.length > 0) {
+            searchClear.classList.add('visible');
+          } else {
+            searchClear.classList.remove('visible');
+          }
+
+          render();
+        }, 250);
+      });
+
+      // Clear search
+      searchClear.addEventListener('click', function() {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.classList.remove('visible');
+        currentPage = 1;
+        render();
+        searchInput.focus();
+      });
+
+      // Initial render
+      render();
     });
   </script>
 </body>
