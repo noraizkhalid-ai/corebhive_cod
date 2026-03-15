@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://noraizkhalid.github.io/corebhive/sitemap.xml
+Sitemap: https://corebhive.com/sitemap.xml

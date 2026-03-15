@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- SEO: Replace with post-specific title and description -->
-<title>Why Every Pakistani SME Needs a Monthly P&L Statement — Core Bhive Blog</title>
-<meta name="description" content="Discover why monthly P&L statements are crucial for Pakistani SMEs and how they can transform your business financial management.">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Your Brand Is Losing You Clients (And What to Do About It) | Core Bhive</title>
+    <meta name="description"
+        content="Discover why poor branding is costing your Pakistani SME real clients. Learn what professional brand identity actually costs and how to fix it.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 <style>
   /* ── NAVIGATION ENHANCEMENTS ── */
 
@@ -285,7 +288,7 @@
   }
 
   .post-body ul li::before {
-    content: '→';
+    content: '\2192';
     color: #FFB400;
     position: absolute;
     left: 0;
@@ -322,7 +325,7 @@
   }
 
   .post-body blockquote::before {
-    content: '"';
+    content: '\201C';
     position: absolute;
     top: -10px;
     left: 20px;
@@ -670,7 +673,7 @@
   }
 
   .toc-list a::before {
-    content: '→';
+    content: '\2192';
     color: #FFB400;
     flex-shrink: 0;
     transition: transform 0.3s ease;
@@ -702,7 +705,9 @@
   }
 
 </style>
+    <script defer src="/js/main.js"></script>
 </head>
+
 <body>
 
 <!-- READING PROGRESS BAR -->
@@ -710,77 +715,64 @@
   <div class="reading-progress__bar" id="progress-bar"></div>
 </div>
 
-<!-- NAV -->
-<nav class="nav" id="navbar">
-  <div class="container">
-    <div class="nav__inner">
+    <!-- NAV -->
+    <nav class="nav" id="navbar">
+        <div class="container">
+            <div class="nav__inner">
+                <a class="nav__logo" href="/">
+                    <img src="/assets/images/Png Logo.png" alt="Core Bhive" height="44">
+                </a>
+                <ul class="nav__links">
+                    <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="/about/" class="nav__link">About Us</a></li>
+                    <li class="nav__item">
+                        <a href="/#services" class="nav__link nav__link--parent">Services</a>
+                        <ul class="nav__dropdown">
+                            <li><a href="/hr-services/">Human Resources (HR)</a></li>
+                            <li><a href="/financial-services/">Finance</a></li>
+                            <li><a href="/it-services/">Information Technology (IT)</a></li>
+                            <li><a href="/branding-services/">Branding & Creative</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"><a href="/blog/" class="nav__link">Insights</a></li>
+                </ul>
+                <div class="nav__ctas">
+                    <a class="btn btn--sm btn--secondary" href="https://wa.me/923219456792" target="_blank"
+                        rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        WhatsApp
+                    </a>
+                    <a class="btn btn--sm btn--primary" href="/contact/">Book a Meeting</a>
+                </div>
+                <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-      <a class="nav__logo" href="../index.html">
-        <img src="../assets/images/Png Logo.png" alt="Core Bhive" height="44">
-      </a>
-
-      <ul class="nav__links">
-        <li class="nav__item">
-          <a href="../index.html" class="nav__link">Home</a>
-        </li>
-        <li class="nav__item">
-          <a href="../about.html" class="nav__link">About Us</a>
-        </li>
-        <li class="nav__item">
-          <a href="../index.html#services" class="nav__link nav__link--parent">Services</a>
-          <ul class="nav__dropdown">
-            <li><a href="../hr-services.html">Human Resources (HR)</a></li>
-            <li><a href="../financial-services.html">Finance</a></li>
-            <li><a href="../it-services.html">Information Technology (IT)</a></li>
-              <li><a href="../branding-services.html">Branding & Creative</a></li>
-          </ul>
-        </li>
-        <li class="nav__item">
-          <a href="../blog.html" class="nav__link active">Insights</a>
-        </li>
-      </ul>
-
-      <div class="nav__ctas">
-        <a class="btn btn--sm btn--secondary" href="https://wa.me/923219456792" target="_blank"
-          rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
-            aria-hidden="true">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          WhatsApp
-        </a>
-        <a class="btn btn--sm btn--primary" href="../contact.html">Book a Meeting</a>
-      </div>
-
-      <button class="nav__hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+    <div class="nav__mobile" id="nav-mobile">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about/" class="nav__link">About Us</a>
+        <div class="nav__mobile-group">
+            <span class="nav__mobile-label">Services</span>
+            <div class="nav__mobile-sub">
+                <a href="/hr-services/">Human Resources (HR)</a>
+                <a href="/financial-services/">Finance</a>
+                <a href="/it-services/">Information Technology (IT)</a>
+                <a href="/branding-services/">Branding & Creative</a>
+            </div>
+        </div>
+        <a href="/blog/" class="nav__link">Insights</a>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;">
+            <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            <a class="btn btn--primary" href="/contact/">Book a Meeting</a>
+        </div>
     </div>
-  </div>
-</nav>
-
-<!-- Mobile nav drawer -->
-<div class="nav__mobile" id="nav-mobile">
-  <a href="../index.html" class="nav__link">Home</a>
-  <a href="../about.html" class="nav__link">About Us</a>
-  <div class="nav__mobile-group">
-    <span class="nav__mobile-label">Services</span>
-    <div class="nav__mobile-sub">
-      <a href="../hr-services.html">Human Resources (HR)</a>
-      <a href="../financial-services.html">Finance</a>
-      <a href="../it-services.html">Information Technology (IT)</a>
-        <a href="../branding-services.html">Branding & Creative</a>
-    </div>
-  </div>
-  <a href="../blog.html" class="nav__link">Insights</a>
-  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;">
-    <a class="btn btn--secondary" href="https://wa.me/923219456792" target="_blank" rel="noopener noreferrer">WhatsApp
-      Us</a>
-    <a class="btn btn--primary" href="../contact.html">Book a Meeting</a>
-  </div>
-</div>
 
 <!-- POST LAYOUT -->
 <div class="post-layout">
@@ -790,106 +782,160 @@
     <article>
       <!-- Category + breadcrumb -->
       <span class="post-category">
-        <a href="../blog.html" style="color: var(--muted); text-decoration: none;">Blog</a>
-        &nbsp;/&nbsp; Finance <!-- Replace with actual category -->
+        <a href="/blog/" style="color: var(--muted); text-decoration: none;">Blog</a>
+        &nbsp;/&nbsp; Branding
       </span>
 
       <!-- Title -->
-      <h1>Why Every Pakistani SME Needs<em>a Monthly P&L Statement</em></h1>
+      <h1>Why Your Brand Is Losing You Clients <em>(And What to Do About It)</em></h1>
 
       <!-- Meta -->
       <div class="post-meta">
         <div class="author">
-          <div class="author-avatar">✍️</div>
-          <span>Core Bhive Finance Team</span> <!-- Replace with author name -->
+          <div class="author-avatar">&#127912;</div>
+          <span>Core Bhive Creative Team</span>
         </div>
-        <span class="dot-sep">·</span>
-        <span>March 15, 2025</span> <!-- Replace with publish date -->
-        <span class="dot-sep">·</span>
+        <span class="dot-sep">&middot;</span>
+        <span>March 10, 2025</span>
+        <span class="dot-sep">&middot;</span>
         <span>6 min read</span>
       </div>
 
       <!-- ── ARTICLE BODY ── -->
-      <!-- Replace the content below with the actual article content -->
       <div class="post-body">
 
         <p class="reveal">
-          Most small business owners in Pakistan operate on gut feel. They know roughly what came in, vaguely what went out,
-          and trust that if their bank account isn't empty, things must be going okay. <strong>This approach works — until it doesn't.</strong>
-        </p>
-
-        <p class="reveal">
-          A monthly Profit & Loss (P&L) statement changes all of that. It gives you a clear, factual picture of your business's
-          financial performance every month — not at year-end when it's too late to act.
+          Let's be honest with each other. You know your brand needs work. Maybe your logo was made in a hurry when you first registered your business. Maybe your social media hasn't been updated since Eid. Maybe your business card says one thing and your Instagram says another. Whatever the case, here's the hard truth: <strong>in Pakistan's competitive market, your brand speaks before you do.</strong> And if it's saying the wrong things, you're losing clients before you even get a chance to pitch.
         </p>
 
         <div class="callout reveal">
-          <div class="callout-label">Key Insight</div>
-          <p>Businesses that review monthly financial statements are significantly more likely to identify cash flow problems
-          before they become crises. The P&L is your early warning system.</p>
+          <div class="callout-label">The 3-Second Rule</div>
+          <p>Research shows that potential clients form an opinion about your business in under 3 seconds based on visual impression alone. If your branding looks inconsistent or amateur, you've already lost them — and you'll never even know it happened.</p>
         </div>
 
-        <h2 id="what-is-pl" class="reveal">What Exactly Is a P&L Statement?</h2>
+        <h2 id="first-sales-pitch" class="reveal">1. Your Brand Is Your First Sales Pitch</h2>
 
         <p class="reveal">
-          A Profit & Loss statement (also called an income statement) is a financial document that summarises your revenues,
-          costs, and expenses over a specific period — in this case, a single month. It answers one fundamental question:
-          <strong>did your business make or lose money this month?</strong>
+          Most SME owners in Lahore think branding is just a logo. It's not. Your brand is the entire visual and verbal impression your business leaves on the world. It's your logo, yes — but it's also your color palette, your social media presence, your marketing materials, the way your proposals look, even how your WhatsApp Business profile appears when a potential client opens your message.
         </p>
 
-        <p class="reveal">It typically contains three sections:</p>
+        <p class="reveal">
+          Think about it this way: when someone gets your number from a referral and opens your WhatsApp Business profile, what do they see? A blurry photo? A generic description? No catalogue? That's your brand talking. When a potential client visits your Instagram before a meeting, what impression do they walk away with? That's your brand talking too.
+        </p>
+
+        <p class="reveal">
+          In Pakistan's market, where word-of-mouth and first impressions drive most B2B decisions, <strong>your brand is doing sales for you 24 hours a day.</strong> The question is: is it doing a good job, or is it actively turning people away?
+        </p>
+
+        <h2 id="canva-logo" class="reveal">2. The Canva Logo Problem</h2>
+
+        <p class="reveal">
+          We see this constantly. A business owner needs a logo, so they either design it themselves in Canva using a free template, or they go to Fiverr and get one made for Rs.500. The result? A generic logo that looks like 200 other businesses in Lahore. Your real estate company has the same swoosh as a restaurant in Gulberg. Your consultancy firm uses the same font as a tuition center in DHA.
+        </p>
+
+        <p class="reveal">
+          Here's what professional brand identity actually means:
+        </p>
 
         <ul class="reveal">
-          <li><strong>Revenue</strong> — all money earned from sales and services</li>
-          <li><strong>Cost of Goods Sold (COGS)</strong> — direct costs of delivering your product or service</li>
-          <li><strong>Operating Expenses</strong> — salaries, rent, utilities, marketing, and other overhead</li>
+          <li>A <strong>unique logo</strong> designed specifically for your business, your industry, and your target audience — not pulled from a template library</li>
+          <li>A <strong>defined color palette</strong> that reflects your business personality and is used consistently across every touchpoint</li>
+          <li>A <strong>typography system</strong> — specific fonts for headings, body text, and marketing materials that create a cohesive visual language</li>
+          <li>A <strong>brand guidelines document</strong> that ensures anyone who creates content for your business — from your social media manager to your printer — uses your brand correctly every single time</li>
         </ul>
 
         <p class="reveal">
-          The difference between revenue and all these costs is your <strong>net profit or loss</strong>.
+          This is the foundation everything else builds on. Without it, every marketing effort you make is building on sand. You can spend lakhs on Facebook ads, but if the landing page they arrive at looks unprofessional, <strong>you've wasted every rupee.</strong>
         </p>
 
-        <h2 id="why-monthly" class="reveal">Why Monthly — Not Quarterly or Annually?</h2>
+        <h2 id="inconsistent-materials" class="reveal">3. Inconsistent Marketing Materials Kill Trust</h2>
 
         <p class="reveal">
-          Annual accounts tell you what happened. Monthly P&Ls tell you what's <em>happening</em> — and give you enough
-          time to do something about it.
+          Here's a scenario we see almost every week: a business owner hands us their business card, their company letterhead, and their Instagram profile. The business card uses blue and gold. The letterhead has a completely different shade of blue with a different logo variation. The Instagram posts use random colors, different fonts, and a profile picture that doesn't match either. Three different touchpoints, three completely different visual identities.
         </p>
+
+        <p class="reveal">
+          What message does this send to a potential client? Simple: <strong>this business doesn't have its act together.</strong> If they can't maintain consistency in their own branding, how are they going to deliver consistent quality in their work?
+        </p>
+
+        <p class="reveal">
+          The chain works like this:
+        </p>
+
+        <ul class="reveal">
+          <li><strong>Consistency</strong> builds recognition — people start to immediately identify your brand when they see your colors and style</li>
+          <li><strong>Recognition</strong> builds trust — familiarity makes people feel safe doing business with you</li>
+          <li><strong>Trust</strong> converts to sales — when a client trusts your brand, the sales conversation becomes about scope and price, not about whether you're legitimate</li>
+        </ul>
+
+        <p class="reveal">
+          Every time your materials look different from each other, you break this chain. And in Pakistan's market, where trust is everything in business relationships, you simply cannot afford that.
+        </p>
+
+        <h2 id="instagram-problem" class="reveal">4. Your Instagram Is Either Empty or Embarrassing</h2>
+
+        <p class="reveal">
+          This is the one that hurts to hear, but someone has to say it. Over 70% of Pakistani consumers now check social media before making a purchase decision. Whether you're B2B or B2C, your potential clients are looking you up on Instagram, Facebook, or LinkedIn before they pick up the phone.
+        </p>
+
+        <p class="reveal">
+          So what do they find when they land on your profile? If your last post was 4 months ago, they assume you're either out of business or don't care about your image. If your posts look like they were made in Microsoft Paint — random fonts, pixelated images, no visual consistency — they assume the quality of your work matches the quality of your posts. Either way, <strong>you're actively losing business.</strong>
+        </p>
+
+        <p class="reveal">
+          A managed social media presence in 2025 means:
+        </p>
+
+        <ul class="reveal">
+          <li><strong>Professional graphics</strong> that match your brand identity — not stock templates with your logo pasted on top</li>
+          <li><strong>Consistent posting</strong> — at minimum 3-4 times per week, so your profile looks alive and active</li>
+          <li><strong>Content strategy</strong> — posts that actually serve a purpose, whether it's showcasing your work, educating your audience, or building authority in your space</li>
+          <li><strong>Engagement management</strong> — responding to comments and DMs promptly, because a dead inbox is almost as bad as a dead feed</li>
+        </ul>
+
+        <p class="reveal">
+          This isn't optional anymore. It's not a "nice to have." In 2025, a professional social media presence is as basic a business requirement as having a phone number.
+        </p>
+
+        <h2 id="branding-cost" class="reveal">5. What Professional Branding Actually Costs in Pakistan</h2>
+
+        <p class="reveal">
+          Now, here's where many SME owners check out. They assume professional branding costs lakhs and is only for large corporations with dedicated marketing departments. Let's break down the real numbers:
+        </p>
+
+        <ul class="reveal">
+          <li><strong>Complete brand identity</strong> (logo, color palette, typography, brand guidelines document) — starts around <strong>Rs.25,000</strong></li>
+          <li><strong>Marketing materials package</strong> (business cards, letterhead, envelope, presentation template) — from <strong>Rs.15,000</strong></li>
+          <li><strong>Monthly social media management</strong> (content creation, graphic design, posting, basic engagement) — from <strong>Rs.35,000/month</strong></li>
+        </ul>
+
+        <p class="reveal">
+          Now compare that to the cost of lost clients. Let's say your average client is worth Rs.50,000 in revenue. If poor branding costs you even one client per month — just one person who checked your Instagram, saw an amateur profile, and went to your competitor instead — that's Rs.50,000 lost every single month. <strong>That's Rs.600,000 per year.</strong>
+        </p>
+
+        <p class="reveal">
+          The entire branding investment pays for itself the moment it helps you close even one deal you would have otherwise lost. And realistically, the impact is much larger than that. Better branding doesn't just prevent losses — it actively attracts clients who associate professional presentation with professional service delivery.
+        </p>
+
+        <div class="callout reveal">
+          <div class="callout-label">The Math Is Simple</div>
+          <p>A one-time brand identity investment of Rs.25,000 versus losing even one Rs.50,000 client per month to a competitor who simply looks more professional. The ROI on branding isn't just positive — it's one of the highest-return investments a Pakistani SME can make.</p>
+        </div>
 
         <blockquote class="reveal">
-          <p>"A business that only reviews finances annually is like a pilot who only checks their instruments
-          once — at landing."</p>
+          <p>"Your competitors aren't necessarily better than you. They just look better. Fix your brand, and watch what happens to your sales pipeline."</p>
         </blockquote>
-
-        <h2 id="getting-started" class="reveal">How to Get Started</h2>
-
-        <p class="reveal">
-          You don't need expensive software or a full accounting team to produce a monthly P&L.
-          What you need is consistent bookkeeping — and a partner who knows how to structure it properly.
-        </p>
-
-        <ol class="reveal">
-          <li>Track all income and expenses as they occur — not in a batch at month-end</li>
-          <li>Categorise expenses correctly (COGS vs. operating expenses)</li>
-          <li>Reconcile your bank statements monthly</li>
-          <li>Review the P&L with your accountant or financial advisor within the first week of the new month</li>
-        </ol>
-
-        <p class="reveal">
-          At Core Bhive, we produce clean, easy-to-read monthly financial statements for all our financial services clients —
-          delivered in the first week of every month, with a brief commentary explaining the key numbers.
-        </p>
 
       </div>
 
       <!-- Post Footer -->
       <div class="post-footer reveal">
         <div class="post-tags">
-          <span class="post-tag">Finance</span>
+          <span class="post-tag">Branding</span>
+          <span class="post-tag">Brand Identity</span>
+          <span class="post-tag">Social Media</span>
           <span class="post-tag">SME</span>
-          <span class="post-tag">Bookkeeping</span>
-          <span class="post-tag">Tax</span>
-          <span class="post-tag">Financial Reporting</span>
+          <span class="post-tag">Pakistani Business</span>
         </div>
 
         <div class="share-bar">
@@ -904,10 +950,10 @@
         </div>
 
         <div class="post-cta">
-          <p>Want clean monthly financial reports for your business — without the hassle?</p>
-          <a href="../contact.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-            <span>Book a Free Financial Consultation</span>
-            <span style="font-size: 1.2rem;">→</span>
+          <p>Ready to fix your brand?</p>
+          <a href="/contact/" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            <span>Book a Free Brand Consultation</span>
+            <span style="font-size: 1.2rem;">&rarr;</span>
           </a>
         </div>
       </div>
@@ -922,26 +968,28 @@
     <div class="sidebar-section">
       <div class="sidebar-label">In This Article</div>
       <ul class="toc-list">
-        <li><a href="#what-is-pl">What Is a P&L Statement?</a></li>
-        <li><a href="#why-monthly">Why Monthly Matters</a></li>
-        <li><a href="#getting-started">How to Get Started</a></li>
+        <li><a href="#first-sales-pitch">Your Brand Is Your First Sales Pitch</a></li>
+        <li><a href="#canva-logo">The Canva Logo Problem</a></li>
+        <li><a href="#inconsistent-materials">Inconsistent Marketing Materials Kill Trust</a></li>
+        <li><a href="#instagram-problem">Your Instagram Is Either Empty or Embarrassing</a></li>
+        <li><a href="#branding-cost">What Professional Branding Actually Costs in Pakistan</a></li>
       </ul>
     </div>
 
     <!-- Related Posts -->
     <div class="sidebar-section">
       <div class="sidebar-label">Related Articles</div>
-      <a href="post-template.html" class="related-post">
-        <span>Finance</span>
-        <h4>FBR Compliance Checklist for SMEs in 2025</h4>
+      <a href="/blog/social-media-sme/" class="related-post">
+        <span>Branding</span>
+        <h4>Social Media for Pakistani SMEs: Why Posting Once a Month Is Worse Than Not Posting</h4>
       </a>
-      <a href="post-template.html" class="related-post">
-        <span>Finance</span>
-        <h4>Cash Flow vs. Profit: Why Your Business Can Be Both</h4>
-      </a>
-      <a href="post-template.html" class="related-post">
+      <a href="/blog/hr-sme-mistakes/" class="related-post">
         <span>HR</span>
-        <h4>5 Signs It's Time to Outsource Your HR Function</h4>
+        <h4>5 HR Mistakes Pakistani SME Owners Make (And How to Avoid Them)</h4>
+      </a>
+      <a href="/branding-services/" class="related-post">
+        <span>Branding</span>
+        <h4>Explore Our Branding Services</h4>
       </a>
     </div>
 
@@ -949,9 +997,9 @@
     <div class="sidebar-section" style="text-align: center; border-color: rgba(201,168,76,0.2);">
       <div class="sidebar-label">Free Consultation</div>
       <p style="font-size: 0.85rem; color: rgba(240,237,230,0.6); margin-bottom: 20px; line-height: 1.6;">
-        Let our team review your business finances — free, no obligation.
+        Let our creative team audit your brand — free, no obligation.
       </p>
-      <a href="../contact.html" class="btn-primary" style="display: flex; justify-content: center; font-size: 0.78rem;">
+      <a href="/contact/" class="btn-primary" style="display: flex; justify-content: center; font-size: 0.78rem;">
         Book a Free Call
       </a>
     </div>
@@ -967,7 +1015,7 @@
 
         <!-- Col 1: Brand -->
         <div class="footer-col footer-brand">
-          <a class="footer-logo" href="../index.html">Core B'hive</a>
+          <a class="footer-logo" href="/">Core B'hive</a>
           <p class="footer-tagline">Affordable. Reliable. Professional.</p>
           <div class="footer-contact">
             <a class="footer-contact-link" href="https://wa.me/923219456792" target="_blank" rel="noopener noreferrer">
@@ -994,14 +1042,14 @@
         <div class="footer-col">
           <h4 class="footer-heading">Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../hr-services.html">Human Resources (HR)</a></li>
-            <li><a href="../financial-services.html">Finance</a></li>
-            <li><a href="../it-services.html">Information Technology (IT)</a></li>
-            <li><a href="../branding-services.html">Branding & Creative</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../blog.html">Insights</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/hr-services/">Human Resources (HR)</a></li>
+            <li><a href="/financial-services/">Finance</a></li>
+            <li><a href="/it-services/">Information Technology (IT)</a></li>
+            <li><a href="/branding-services/">Branding & Creative</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/blog/">Insights</a></li>
+            <li><a href="/contact/">Contact</a></li>
           </ul>
         </div>
 
@@ -1031,12 +1079,12 @@
 
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Core Bhive Service Pvt Ltd. All rights reserved.</p>
+        <p>&copy; 2025 Core Bhive Service Pvt Ltd. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
-<script src="../js/main.js"></script>
+<script src="/js/main.js"></script>
 <script>
   // ── READING PROGRESS BAR ──
   const progressBar = document.getElementById('progress-bar');
@@ -1174,4 +1222,5 @@
   })();
 </script>
 </body>
+
 </html>
