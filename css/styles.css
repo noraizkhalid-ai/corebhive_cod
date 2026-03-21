@@ -3306,42 +3306,28 @@ h6,
   }
 }
 
-.about-team__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-10);
-  max-width: 1100px;
+/* Founder spotlight layout */
+.about-founder {
+  max-width: 700px;
   margin-inline: auto;
   perspective: 1000px;
 }
 
-/* Hexagonal-inspired card with unique design */
-.about-team__card {
+.about-founder__card {
   background: linear-gradient(135deg, rgba(255, 180, 0, 0.05) 0%, rgba(0, 0, 0, 0.4) 100%);
   border: 2px solid transparent;
   background-clip: padding-box;
   position: relative;
   padding: var(--space-12) var(--space-10);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   clip-path: polygon(
-    0 10%, 10% 0, 90% 0, 100% 10%,
-    100% 90%, 90% 100%, 10% 100%, 0 90%
+    0 8%, 4% 0, 96% 0, 100% 8%,
+    100% 92%, 96% 100%, 4% 100%, 0 92%
   );
-  animation: teamCardFadeIn 0.6s ease-out backwards;
-}
-
-/* Stagger animation for cards */
-.about-team__card:nth-child(1) {
-  animation-delay: 0.6s;
-}
-
-.about-team__card:nth-child(2) {
-  animation-delay: 0.8s;
-}
-
-.about-team__card:nth-child(3) {
-  animation-delay: 1s;
+  animation: teamCardFadeIn 0.6s ease-out 0.6s backwards;
 }
 
 @keyframes teamCardFadeIn {
@@ -3356,15 +3342,15 @@ h6,
 }
 
 /* Glowing border effect */
-.about-team__card::before {
+.about-founder__card::before {
   content: '';
   position: absolute;
   inset: -2px;
   background: linear-gradient(135deg, var(--color-gold), transparent, var(--color-gold));
   background-size: 200% 200%;
   clip-path: polygon(
-    0 10%, 10% 0, 90% 0, 100% 10%,
-    100% 90%, 90% 100%, 10% 100%, 0 90%
+    0 8%, 4% 0, 96% 0, 100% 8%,
+    100% 92%, 96% 100%, 4% 100%, 0 92%
   );
   z-index: -1;
   opacity: 0;
@@ -3372,7 +3358,7 @@ h6,
 }
 
 /* Spotlight effect on hover */
-.about-team__card::after {
+.about-founder__card::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -3385,20 +3371,20 @@ h6,
   pointer-events: none;
 }
 
-.about-team__card:hover {
-  transform: translateY(-12px) scale(1.05);
+.about-founder__card:hover {
+  transform: translateY(-8px) scale(1.02);
   box-shadow:
     0 20px 60px rgba(255, 180, 0, 0.3),
     0 0 80px rgba(255, 180, 0, 0.15),
     inset 0 0 40px rgba(255, 180, 0, 0.08);
 }
 
-.about-team__card:hover::before {
+.about-founder__card:hover::before {
   opacity: 1;
   background-position: 100% 100%;
 }
 
-.about-team__card:hover::after {
+.about-founder__card:hover::after {
   opacity: 1;
   animation: spotlightRotate 3s linear infinite;
 }
@@ -3412,11 +3398,48 @@ h6,
   }
 }
 
-/* Decorative icon/badge above name */
+.about-founder__info {
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.about-founder__card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-founder__card:hover h3 {
+  color: var(--color-gold);
+  text-shadow: 0 0 20px rgba(255, 180, 0, 0.5);
+}
+
+.about-founder__role {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-4);
+}
+
+.about-founder__bio {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-400);
+}
+
+/* Decorative icon/badge */
 .about-team__badge {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto var(--space-6);
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
   background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
   border-radius: 50%;
   display: flex;
@@ -3439,76 +3462,21 @@ h6,
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.about-team__card:hover .about-team__badge {
+.about-founder__card:hover .about-team__badge {
   transform: scale(1.15) rotate(360deg);
   box-shadow: 0 12px 40px rgba(255, 180, 0, 0.6);
 }
 
-.about-team__card:hover .about-team__badge::before {
+.about-founder__card:hover .about-team__badge::before {
   opacity: 0.6;
   transform: scale(1.2);
 }
 
 /* Icon inside badge */
 .about-team__badge svg {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   fill: var(--color-black);
-}
-
-.about-team__content {
-  position: relative;
-  z-index: 1;
-}
-
-.about-team__card h3 {
-  font-family: var(--font-display);
-  font-size: var(--text-2xl);
-  font-weight: var(--weight-bold);
-  color: var(--color-white);
-  margin-bottom: var(--space-4);
-  transition: all 0.3s ease;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.about-team__card:hover h3 {
-  color: var(--color-gold);
-  text-shadow: 0 0 20px rgba(255, 180, 0, 0.5);
-  transform: scale(1.05);
-}
-
-.about-team__role {
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  color: var(--color-gray-400);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: var(--weight-medium);
-  transition: color 0.3s ease;
-  position: relative;
-  display: inline-block;
-  padding-bottom: var(--space-2);
-}
-
-/* Animated underline */
-.about-team__role::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
-  transition: width 0.4s ease;
-}
-
-.about-team__card:hover .about-team__role {
-  color: var(--color-gold-light);
-}
-
-.about-team__card:hover .about-team__role::after {
-  width: 100%;
 }
 
 /* --- SECTION 8: CTA --- */
@@ -3585,12 +3553,7 @@ h6,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-team__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-12);
-  }
-
-  .about-team__card {
+  .about-founder__card {
     padding: var(--space-10) var(--space-8);
   }
 }
@@ -3616,12 +3579,9 @@ h6,
     grid-template-columns: 1fr;
   }
 
-  .about-team__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-  }
-
-  .about-team__card {
+  .about-founder__card {
+    flex-direction: column;
+    text-align: center;
     padding: var(--space-10) var(--space-8);
     clip-path: polygon(
       0 5%, 5% 0, 95% 0, 100% 5%,
@@ -3629,24 +3589,29 @@ h6,
     );
   }
 
-  .about-team__card::before {
+  .about-founder__card::before {
     clip-path: polygon(
       0 5%, 5% 0, 95% 0, 100% 5%,
       100% 95%, 95% 100%, 5% 100%, 0 95%
     );
   }
 
+  .about-founder__info {
+    text-align: center;
+  }
+
   .about-team__badge {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
   }
 
   .about-team__badge svg {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
   }
 
-  .about-team__card h3 {
+  .about-founder__card h3 {
     font-size: var(--text-xl);
   }
 
