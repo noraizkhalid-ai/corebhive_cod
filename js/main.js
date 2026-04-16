@@ -167,7 +167,7 @@
   /* ── FLOATING WHATSAPP BUTTON ── */
   (function () {
     const waBtn = document.createElement('a');
-    waBtn.href = 'https://wa.me/923219456792';
+    waBtn.href = 'https://wa.me/923219440716';
     waBtn.target = '_blank';
     waBtn.rel = 'noopener noreferrer';
     waBtn.className = 'wa-float';
