@@ -411,11 +411,9 @@
       /* equal height */
     }
 
-    /* 3 cards in a 2-col grid: center the last card across the bottom row */
+    /* 3 cards in a 2-col grid: last card spans the full width of the two above */
     .svc-card:last-child {
       grid-column: 1 / -1;
-      justify-self: center;
-      width: calc(50% - 1px);
     }
 
     .svc-card {
@@ -427,6 +425,8 @@
       color: inherit;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      text-align: center;
       transition: background 0.35s, box-shadow 0.35s;
     }
 
