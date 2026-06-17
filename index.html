@@ -411,6 +411,13 @@
       /* equal height */
     }
 
+    /* 3 cards in a 2-col grid: center the last card across the bottom row */
+    .svc-card:last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: calc(50% - 1px);
+    }
+
     .svc-card {
       background: #0d0d0d;
       padding: 52px 40px 64px;
@@ -857,6 +864,12 @@
 
       .svc-grid {
         grid-template-columns: 1fr;
+      }
+
+      /* full width again on mobile (single column) */
+      .svc-card:last-child {
+        grid-column: auto;
+        width: 100%;
       }
 
       .steps-row {
