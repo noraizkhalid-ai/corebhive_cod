@@ -3,66 +3,77 @@
 
   <url>
     <loc>https://corebhive.com/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/about/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/contact/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/hr-services/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/financial-services/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/branding-services/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/blog/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/blog/bookkeeping-vs-cfo/</loc>
+    <lastmod>2025-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/blog/brand-identity-clients/</loc>
+    <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/blog/hr-sme-mistakes/</loc>
+    <lastmod>2025-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://corebhive.com/blog/social-media-sme/</loc>
+    <lastmod>2025-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
